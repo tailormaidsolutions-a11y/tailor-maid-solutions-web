@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Maid Solutions | Bin Butlers Valet Trash & Porter Service</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #20c997; /* Teal */
+            --color-secondary: #DAA520; /* Gold */
+            --color-khaki: #b8a68b; /* Khaki */
+        }
+        .text-primary { color: var(--color-primary); }
+        .bg-primary { background-color: var(--color-primary); }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        /* High-quality Hero Gradient overlay */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1558444479-c84851727d60?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .logo-shadow {
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        .floating-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tms-primary': '#20c997',
+                        'tms-gold': '#DAA520',
+                        'tms-khaki': '#b8a68b',
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Floating Request Button -->
+    <a href="#appointment" class="floating-btn bg-tms-gold text-white font-black py-4 px-6 rounded-full shadow-2xl hover:scale-110 flex items-center space-x-2 group">
+        <svg class="w-6 h-6 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        <span class="hidden md:inline">Request Appointment</span>
+    </a>
+
+    <!-- 1. HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center">
+            <!-- Tailor Maid Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="uploaded:3e53b66e-aea9-4f7a-9c72-293a0272c067-1_all_6418.jpg" alt="Tailor Maid Solutions Logo" class="h-14 w-auto logo-shadow">
+                <div class="hidden md:block">
+                    <span class="text-xl font-black text-gray-900 uppercase tracking-tighter">Tailor Maid</span>
+                    <span class="block text-xs font-bold text-tms-primary -mt-1 tracking-widest uppercase">Solutions</span>
+                </div>
+            </div>
+
+            <!-- Navigation / Buttons -->
+            <div class="flex items-center space-x-4">
+                <a href="tel:4049804911" class="hidden sm:flex items-center text-gray-600 font-semibold hover:text-tms-primary transition">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                    404-980-4911
+                </a>
+                <a href="#appointment" class="bg-tms-primary text-white font-bold py-2 px-6 rounded-full shadow-md hover:bg-opacity-90 transition transform hover:scale-105">
+                    Schedule Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero-bg relative text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            <!-- Bin Butlers Badge Logo -->
+            <div class="bg-white p-4 rounded-2xl shadow-2xl mb-8 transform -rotate-1 hover:rotate-0 transition duration-500">
+                <img src="uploaded:3e53b66e-aea9-4f7a-9c72-293a0272c067-1_all_2430.jpg" alt="Bin Butlers Badge" class="h-32 sm:h-48 w-auto">
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tight">
+                Premium Valet Trash <br class="hidden md:block"> & Porter Services
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-200 max-w-2xl mb-10 font-light">
+                Professional waste solutions for Apartment Complexes and HOA Communities. Our <span class="text-tms-primary font-bold">Bin Butlers</span> handle the heavy lifting.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#services" class="bg-white text-gray-900 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition shadow-xl">
+                    View Services
+                </a>
+                <a href="#appointment" class="bg-tms-gold text-white font-bold py-4 px-10 rounded-full hover:bg-opacity-90 transition shadow-xl border-2 border-tms-gold">
+                    Request Appointment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Tailored Solutions for Your Community</h2>
+                <div class="h-1.5 w-24 bg-tms-primary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Apartments -->
+                <div class="relative group bg-gray-50 rounded-3xl p-8 border-2 border-transparent hover:border-tms-primary transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-tms-primary/10 p-3 rounded-2xl mr-4">
+                            <span class="text-3xl">🏢</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900">Apartment Complexes</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-600 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-tms-primary mr-2 font-bold">●</span>
+                            <span><strong>Valet Trash:</strong> Sun–Fri, 6:00 PM – 10:00 PM.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-tms-primary mr-2 font-bold">●</span>
+                            <span><strong>Box Removal:</strong> Cardboard breakdown every Tue/Thu.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-tms-primary mr-2 font-bold">●</span>
+                            <span><strong>Porter Service:</strong> Neighborhood policing and dumpster area cleanup included.</span>
+                        </li>
+                    </ul>
+                    <img src="uploaded:3e53b66e-aea9-4f7a-9c72-293a0272c067-1_all_2430.jpg" alt="Badge" class="absolute top-4 right-4 h-12 opacity-10 group-hover:opacity-100 transition duration-500">
+                </div>
+
+                <!-- HOA -->
+                <div class="relative group bg-gray-50 rounded-3xl p-8 border-2 border-transparent hover:border-tms-gold transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-tms-gold/10 p-3 rounded-2xl mr-4">
+                            <span class="text-3xl">🏡</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900">HOA Single-Home</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-600 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-tms-gold mr-2 font-bold">●</span>
+                            <span><strong>Can Management:</strong> Out one day, collected the next.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-tms-gold mr-2 font-bold">●</span>
+                            <span><strong>Hours:</strong> Mon–Fri, 8:00 AM – 5:00 PM.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-tms-gold mr-2 font-bold">●</span>
+                            <span><strong>Customized:</strong> Flexible schedules based on neighborhood needs.</span>
+                        </li>
+                    </ul>
+                    <img src="uploaded:3e53b66e-aea9-4f7a-9c72-293a0272c067-1_all_2430.jpg" alt="Badge" class="absolute top-4 right-4 h-12 opacity-10 group-hover:opacity-100 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. APPOINTMENT -->
+    <section id="appointment" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white text-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="bg-tms-primary md:w-1/3 p-10 text-white flex flex-col justify-center">
+                    <img src="uploaded:3e53b66e-aea9-4f7a-9c72-293a0272c067-1_all_6418.jpg" alt="Tailor Maid" class="w-24 h-auto mb-6 bg-white rounded-full p-2 mx-auto">
+                    <h4 class="text-2xl font-black mb-4 text-center">Let's Talk</h4>
+                    <p class="text-sm opacity-90 text-center">Schedule a site visit to discuss the best solution for your community.</p>
+                </div>
+                <div class="md:w-2/3 p-10">
+                    <!-- Form updated for Formspree functionality -->
+                    <form id="appointmentForm" action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" name="community_name" placeholder="Community Name" required class="p-3 border rounded-xl focus:ring-2 focus:ring-tms-primary outline-none">
+                            <input type="text" name="contact_name" placeholder="Your Name" required class="p-3 border rounded-xl focus:ring-2 focus:ring-tms-primary outline-none">
+                        </div>
+                        <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 border rounded-xl focus:ring-2 focus:ring-tms-primary outline-none">
+                        <select name="service_type" class="w-full p-3 border rounded-xl focus:ring-2 focus:ring-tms-primary outline-none bg-white">
+                            <option value="Apartment Valet">Apartment Valet Service</option>
+                            <option value="HOA Can Service">HOA Can Service</option>
+                            <option value="Both">Both / Other</option>
+                        </select>
+                        <button type="submit" class="w-full bg-tms-primary text-white font-black py-4 rounded-xl shadow-lg hover:bg-opacity-90 transition">
+                            Request Appointment
+                        </button>
+                    </form>
+                    <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-xl font-bold text-center">
+                        Request Sent! We'll contact you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer class="bg-gray-100 border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 items-center text-center md:text-left">
+                <!-- Column 1 -->
+                <div>
+                    <img src="uploaded:3e53b66e-aea9-4f7a-9c72-293a0272c067-1_all_6418.jpg" alt="Tailor Maid Solutions" class="h-20 mx-auto md:mx-0 mb-4">
+                    <p class="text-gray-500 text-sm">Providing professional valet waste and porter solutions with a butler's touch.</p>
+                </div>
+                <!-- Column 2 -->
+                <div class="space-y-2">
+                    <h5 class="font-black text-gray-900">Contact Us</h5>
+                    <p class="text-gray-600">📞 404-980-4911</p>
+                    <p class="text-gray-600">✉️ Tailormidsolutions@gmail.com</p>
+                    <p class="text-gray-600">🌐 tailormaid.solutions</p>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <img src="uploaded:3e53b66e-aea9-4f7a-9c72-293a0272c067-1_all_2430.jpg" alt="Bin Butlers Badge" class="h-24 mx-auto">
+                    <p class="text-xs font-bold text-tms-gold mt-2 uppercase tracking-widest">Authorized Bin Butlers Service</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-8 text-center text-xs text-gray-400 font-medium">
+                © 2024 TAILOR MAID SOLUTIONS. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('appointmentForm');
+        const successMessage = document.getElementById('formSuccess');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // To make this fully functional:
+            // 1. Go to Formspree.io and create a free account.
+            // 2. Create a "New Form" and copy the unique ID.
+            // 3. Replace 'YOUR_ID_HERE' in the form 'action' attribute above.
+            
+            // For the preview demo, we will simulate the success message.
+            form.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+            
+            // In a live environment, you would use this fetch code:
+            /*
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                form.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+            }
+            */
+        });
+    </script>
+</body>
+</html>
